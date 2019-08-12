@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Suggestion Box</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>
+        Suggestion Box
+    </h1>
+    <ul>
+        {% for i in comments %}
+            <li>
+                <div class="left">
+                        {{i.comment}}
+             
+                </div>
+                <div ckass="right">
+                        {{i.time}}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form action="" method="POST">
+        <label for="comment">Suggestion</label>
+        <br />
+        <input type="textarea" name="comment" />
+        <br /></br>
+        <input type="submit" value+"Submit">
+    </form>
+</body>
+</html>
