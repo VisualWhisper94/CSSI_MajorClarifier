@@ -1,5 +1,56 @@
 h1
 {
   font-size: 12px;
-  color: blue;
+<<<<<<< HEAD
+  color: red;
+=======
+  color: orange;
+}
+
+#img {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.container
+{
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+>>>>>>> 251ced17db12bc8ef854c3c06b7529ded273baf5
 }
