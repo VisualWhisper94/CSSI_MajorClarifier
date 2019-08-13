@@ -7,14 +7,14 @@ from data_init import seed_data, ANCESTORY_KEY
 jinja_env =  jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
-    autoescape=True) 
+    autoescape=True)
 
 def GetComments():
     cmt = []
-    
+
     for i in Comment.query(ancestor=ANCESTORY_KEY).order(-Comment.date).fetch():
         cmt.append({"comment":i.msg,"time":i.date})
-    
+
     return cmt
 
 class MainPage(webapp2.RequestHandler):
@@ -30,8 +30,8 @@ class MainPage(webapp2.RequestHandler):
         if msg != "" :
             Comment(parent=ANCESTORY_KEY,msg=msg,date=value()).put()
         vals = {"comments":GetComments()}
+        vals["items"] = self.request.POST.items()
         self.response.write(t.render(vals))
 
 routes = [('/',MainPage)]
 app = webapp2.WSGIApplication(routes, debug=True)
-
