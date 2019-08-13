@@ -16,7 +16,7 @@
             <li>
                 <div class="left">
                         {{i.comment}}
-             
+
                 </div>
                 <div ckass="right">
                         {{i.time}}
@@ -30,7 +30,16 @@
         <br />
         <input type="textarea" name="comment" />
         <br /></br>
+        <input type="text" value="Value" name="addition" />
+
         <input type="submit" value+"Submit">
     </form>
+
+    {% for i in items %}
+        <li>
+          {{i[1]}}
+        </li>
+    {% endfor %}
+
 </body>
 </html>
