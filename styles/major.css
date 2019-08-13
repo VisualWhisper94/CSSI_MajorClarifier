@@ -1,10 +1,8 @@
 h1
 {
-  font-size: 12px;
-<<<<<<< HEAD
-  color: red;
-=======
-  color: orange;
+  font-size: 30px;
+  color: #4CAF50;
+  text-align: center;
 }
 
 #img {
@@ -32,12 +30,14 @@ h1
 
 .container
 {
-  position: absolute;
+  border: 2px ;
   right: 0;
-  margin: 20px;
+  margin: auto;
   max-width: 300px;
   padding: 16px;
   background-color: white;
+  opacity: 0.8;
+
 }
 
 /* Full-width input fields */
@@ -52,5 +52,18 @@ h1
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
->>>>>>> 251ced17db12bc8ef854c3c06b7529ded273baf5
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
 }
