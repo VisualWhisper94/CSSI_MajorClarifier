@@ -12,33 +12,36 @@
         Major Clarifier
     </h1>
 
-    <div id="img">
+  <div id="img">
   <img src="https://i.kinja-img.com/gawker-media/image/upload/s--7rxeih2j--/c_scale,f_auto,fl_progressive,q_80,w_800/k54v9hraig7aab9xky7k.jpg" alt="">
   </div>
-
-
-
     <form action="" class="container" method="POST">
       <label for="comment">How Many Credits Do You Have:</label>
-      <br />
+      <br/>
       <input type= "textarea" name= "comment" />
-      <br />
+      <br/>
       <label for ="comment2">What is your GPA:</label>
-      <br />
+      <br/>
       <input type="textarea" name="comment2" />
-      <br />
+      <br/>
       <label for="comment3">What Are Your Classes:</label>
-      <br />
-      <input typr="textarea" name="comment3" />
-      <br />
-      <label for="comment4">What Is Your Major:</label>
-      <br />
+      <br/>
+      <input type="textarea" name="comment3" />
+      <input type ="button" name ="add" value="+" oneclick="addClass()">
+      <br/>
+      <label for="comment4">What Is Your Major: </label>
+      <br/>
       <input type="textarea" name="comment4" />
-      <br />< /br>
-      <input type="submit" value+"Enter"
+      <br/>
+      <input type="submit" value+"Enter">
+      </label>
+
     </form>
-
-
+  <!-- {%for i in comment3%}
+    <li>
+        {{i[1]}}
+      </li>
+    {% endfor %} -->
     <script src= "major.js"></script>
   </body>
 </html>
