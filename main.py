@@ -1,9 +1,13 @@
 import webapp2
 import os
 import jinja2
+<<<<<<< HEAD
+#from app_model import Comment, value
+=======
 from app_model import Major, ANCESTORY_KEY
 from subjects import subject_data
 #from app_model import Comment, values
+>>>>>>> 2e863c327932fcd2a527d362ad60aeb8cbdec9cc
 #from data_init import seed_data, ANCESTORY_KEY
 
 # This initializes the jinja2 Environment.
@@ -45,9 +49,17 @@ class MajorHandler(webapp2.RequestHandler):
             cummlpercent= failedclasses / float(allclasses)
 
 
+class ResultHandler(webapp2.RequestHandler):
+    def get(self):
+        t = the_jinja_env.get_template('templates/results.html')
+        self.response.write(t.render())
 
 
 
 
-routes = [('/', MajorHandler),]
-app = webapp2.WSGIApplication(routes ,debug=True)
+
+routes = [
+    ('/', MajorHandler),
+    ('.results', ResultHandler)
+    ]
+app = webapp2.WSGIApplication( routes , debug=True)
