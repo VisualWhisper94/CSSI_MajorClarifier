@@ -13,18 +13,24 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 #Created a handler called MajorHandler
-def GetComments():
-    cmt=[]
-    #for i in Comment.query(ancestor=ANCESTORY_KEY).fetch():
-        #cmt.append({"comment":i.msg})
-    #return cmt
+def GetMajors():
+    Majors  = []
+    for i in Major.query(ancestor=ANCESTORY_KEY).order(Major.name).fetch():
+        majors.append(i.name)
+    
+    majors.append("Other")
+    return majors
 
 class MajorHandler(webapp2.RequestHandler):
     def get(self):
         t = the_jinja_env.get_template('templates/major.html')
-        values = {"comments3":GetComments()}
+        values = {"comment3":GetMajors()}
         self.response.write(t.render(values))
     def post(self):
+        t = jinja_env.get_template('/templates/major.html')
+        vals = {"comment4":GetMajors()}
+        self.response.write(t.render(values))
+
         Classes = self.request.POST.items()
         failedclasses=0
         allclasses =0
