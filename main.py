@@ -36,9 +36,9 @@ class MajorHandler(webapp2.RequestHandler):
             cummlpercent= failedclasses / float(allclasses)
 
 
-class ResultHandler(webapp2.RequestHandler):
+class EmailHandler(webapp2.RequestHandler):
     def get(self):
-        t = the_jinja_env.get_template('templates/results.html')
+        t = the_jinja_env.get_template('templates/email.html')
         self.response.write(t.render())
 
 
@@ -47,6 +47,6 @@ class ResultHandler(webapp2.RequestHandler):
 
 routes = [
     ('/', MajorHandler),
-    ('.results', ResultHandler)
+    ('/email', EmailHandler)
     ]
 app = webapp2.WSGIApplication( routes , debug=True)
