@@ -1,8 +1,8 @@
 import webapp2
 import jinja2
 import os
-from app_models import Comment, value
-from data_init import seed_data, ANCESTORY_KEY
+#from app_models import Comment, value
+#from data_init import seed_data, ANCESTORY_KEY
 
 jinja_env =  jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
