@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Results</title>
+    <title>Transcript</title>
 </head>
 <body>
-    
+    <h1>Transcript</h1>
+
+    <ul>
+        <li>
+            <div>
+                Major:
+            </div>
+            <div>
+                {{major}}
+            </div>    
+        </li>
+        <li>
+            <div>
+                Status:
+            </div>
+            <div>
+                {{status}}
+            </div>    
+        </li>
+        <li>
+            <div>
+                Classes Completed: 
+            </div>
+            <div>
+                {{count}}
+            </div>    
+        </li>
+        <li>
+            <div>
+                Classes Passed:
+            </div>
+            <div>
+                {{passed}}
+            </div>    
+        </li>
+        <li>
+            <div>
+                Classes Failed:
+            </div>
+            <div>
+                {{failed}}
+            </div>    
+        </li>
+        <li>
+            <div>
+                Class List:
+            </div>
+            <div>
+                <ul>
+                {% for i in classes %}
+                    <li class={{i[2]}}>{{i[0]}} {{i[1]}}</li>
+                {% endfor %}
+                </ul>
+            </div>    
+        </li>
+        <li>
+            <div>
+                Suggestions:
+            </div>
+            <div>
+                {{suggestions}}
+            </div>
+        </li>
+    </ul>
 </body>
 </html>

@@ -35,10 +35,10 @@ def CompileClassData(elements):
 
             if float(elements[i+1][1]) < 3.00:
                 values["failed"] += 1
-                value["classes"].append((elements[i][1],elements[i+1][1],"failed"))
+                values["classes"].append((elements[i][1],elements[i+1][1],"failed"))
             else:
                 values["passed"] += 1
-                value["classes"].append((elements[i][1],elements[i+1][1],"passed"))
+                values["classes"].append((elements[i][1],elements[i+1][1],"passed"))
 
         i += 1 
 
@@ -61,6 +61,15 @@ def CompileClassData(elements):
     else:
         values["status"] = "Post Graduate"
     
+def Suggestion(percent):
+    if values["count"] == 0:
+        values["suggestions"] = "Please register for classes."
+    elif percent <= 0.25:
+        values["suggestions"] = "You are on track. Keep up the pace."
+    elif percent >= 0.275 and percent < 0.5:
+        values["suggestions"] = "You may need help keeping up the pace. Consider finding external help such as tutoring."
+    else:
+        values["suggestions"] = "You may need to consider switching your major. Please speak to your advisor for further help."
 
 class MajorHandler(webapp2.RequestHandler):
     def get(self):
@@ -75,9 +84,9 @@ class MajorHandler(webapp2.RequestHandler):
         cummlpercent = 0
 
         if values["count"] != 0:
-            cummlpercent = failedclasses / float(allclasses)
+            cummlpercent = values["failed"] / float(values["count"])
         
-        values["elements"] = [len(classes),cummlpercent]
+        Suggestion(cummlpercent)
 
         self.response.write(t.render(values))
 
