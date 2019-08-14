@@ -25,7 +25,7 @@ h1
 }
 
 #img {
-  opacity: 0.5; 
+  opacity: 0.5;
   filter: alpha(opacity=50);
 }
 
@@ -34,7 +34,7 @@ h1
   border: 2px ;
   right: 0;
   margin: auto;
-  max-width: 300px;
+  max-width: 400px;
   padding: 16px;
   background-color: white;
   opacity: 0.8;
@@ -64,9 +64,7 @@ input[type=text]:focus, input[type=password]:focus {
   width: 100%;
   /*opacity: 0.9;*/
 }
-
-
-.btn:hover 
+.btn:hover
 {
   opacity: 1;
 }
@@ -74,4 +72,8 @@ input[type=text]:focus, input[type=password]:focus {
 .failed
 {
   color: red;
+}
+.Passed
+{
+  color: green;
 }
