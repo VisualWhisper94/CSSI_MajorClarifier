@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Code</title>
+    <title>Major Clarifier</title>
+    <link rel="stylesheet" href="styles/major.css">
 </head>
+
 <body>
-    <form method="POST" action="/" name="tester">
+    <div id="img">
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--7rxeih2j--/c_scale,f_auto,fl_progressive,q_80,w_800/k54v9hraig7aab9xky7k.jpg" alt="">
+    </div>
+
+    <form method="POST" action="/" name="tester" class="container">
         <label for="majors">Major: </label>
         <select name="majors">
             {% for i in majors %}
@@ -21,7 +27,7 @@
         <input type="text" name="newelement" />
         <label for="gpa">GPA: </label>
         <input type="text" name="gpa" />
-        <input type="button" name="add" value="+" onclick="addClass()" />
+        <input type="button" name="add" value="+" onclick="addClass2()" />
         <br />
         <input type="submit" name="submit" value="Submit" />
     </form>

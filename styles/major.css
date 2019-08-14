@@ -1,3 +1,4 @@
+
 h1
 {
   font-size: 30px;
@@ -24,7 +25,7 @@ h1
 }
 
 #img {
-  opacity: 0.5;
+  opacity: 0.5; 
   filter: alpha(opacity=50);
 }
 
@@ -40,7 +41,7 @@ h1
 
 }
 
-/* Full-width input fields */
+
   input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -61,8 +62,9 @@ input[type=text]:focus, input[type=password]:focus {
   border: none;
   cursor: pointer;
   width: 100%;
-  opacity: 0.9;
+  /*opacity: 0.9;*/
 }
+
 
 .btn:hover {
   opacity: 1;
