@@ -1,6 +1,8 @@
 import webapp2
 import os
 import jinja2
+from app_model import Major, ANCESTORY_KEY
+from subjects import subject_data
 #from app_model import Comment, values
 #from data_init import seed_data, ANCESTORY_KEY
 

@@ -5,3 +5,8 @@ class Class (ndb.Model):
     gpa = ndb.FloatProperty (requiered= True, defualt=0.00)
 
 ANCESTORY_KEY= ndb.Key("Class","startkey")
+gpa= 
+
+
+
+if 
