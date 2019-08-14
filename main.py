@@ -16,6 +16,8 @@ the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+
+values = {"majors":["History","Mathematics","English","Liberal Arts","Computer Science","Other"]}
 #Created a handler called MajorHandler
 def GetMajors():
     Majors  = []
@@ -28,7 +30,7 @@ def GetMajors():
 class MajorHandler(webapp2.RequestHandler):
     def get(self):
         t = the_jinja_env.get_template('templates/major.html')
-        values = {"comment3":GetMajors()}
+        values["comment3"] = GetMajors()
         self.response.write(t.render(values))
     def post(self):
         t = jinja_env.get_template('/templates/major.html')

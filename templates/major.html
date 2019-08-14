@@ -17,7 +17,6 @@
     <h1>
       Major Clarifier
     </h1>
-      
       <label for="comment">How Many Credits Do You Have:</label>
       <br/>
       <input type= "textarea" name= "comment" />
@@ -32,6 +31,11 @@
       <input type ="button" name ="add" value="+" oneclick="addClass()">
       <br/>
       <label for="major">What Is Your Major: </label>
+      <select name="major">
+        {% for i in major%}
+        <option value={{i}}>{{i}}</option>
+        {% end for %}
+      </select>
       <br/>
       <input type="textarea" name="major" />
       <br/>
@@ -39,11 +43,6 @@
       </label>
 
     </form>
-  <!-- {%for i in comment3%}
-    <li>
-        {{i[1]}}
-      </li>
-    {% endfor %} -->
     <script src= "major.js"></script>
   </body>
 </html>
