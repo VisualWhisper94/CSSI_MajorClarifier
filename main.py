@@ -13,14 +13,15 @@ the_jinja_env = jinja2.Environment(
 
 #Values dictionary is holds templates variables
 values = {"majors":["History","Mathematics","English","Liberal Arts","Computer Science","Other"]}
-#Created a handler called MajorHandler
+#defined an elemnt called CompileClassData
+#It appends the value of classes under passed or failed
 
 def CompileClassData(elements):
     values["failed"] = 0
     values["passed"] = 0
     values["count"] = 0
     values["classes"] = []
-    
+
     i = 0
     n = len(elements)
 
@@ -28,7 +29,7 @@ def CompileClassData(elements):
         values["major"] = elements[1][1]
     else:
         values["major"] = elements[0][1]
-    
+
     while i < n:
         if "class" in elements[i][0]:
             values["count"] += 1
@@ -40,7 +41,7 @@ def CompileClassData(elements):
                 values["passed"] += 1
                 values["classes"].append((elements[i][1],elements[i+1][1],"passed"))
 
-        i += 1 
+        i += 1
 
     if values["count"] <= 15:
         values["status"] = "Lower Freshman"
@@ -60,7 +61,7 @@ def CompileClassData(elements):
         values["status"] = "Upper Senior"
     else:
         values["status"] = "Post Graduate"
-    
+#defined an element called suggestions and it takes percentages
 def Suggestion(percent):
     if values["count"] == 0:
         values["suggestions"] = "Please register for classes."
@@ -70,7 +71,7 @@ def Suggestion(percent):
         values["suggestions"] = "You may need help keeping up the pace. Consider finding external help such as tutoring."
     else:
         values["suggestions"] = "You may need to consider switching your major. Please speak to your advisor for further help."
-
+# created a handler called Major and its a request handler 
 class MajorHandler(webapp2.RequestHandler):
     def get(self):
         t = the_jinja_env.get_template('templates/index2.html')
@@ -80,22 +81,22 @@ class MajorHandler(webapp2.RequestHandler):
         t = the_jinja_env.get_template('/templates/results2.html')
         classes = self.request.POST.items()
         CompileClassData(classes)
-        
+
         cummlpercent = 0
 
         if values["count"] != 0:
             cummlpercent = values["failed"] / float(values["count"])
-        
+
         Suggestion(cummlpercent)
 
         self.response.write(t.render(values))
-
+#Created a request handler called Email for the results page
 class EmailHandler(webapp2.RequestHandler):
     def get(self):
         t = the_jinja_env.get_template('templates/email.html')
         self.response.write(t.render())
 
-
+#Routes to the different HTML files
 routes = [
     ('/', MajorHandler),
     ('/email', EmailHandler)
