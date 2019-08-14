@@ -15,10 +15,3 @@ handlers:
 libraries:
 - name: jinja2
   version: latest
-  
-Indexes:
-- kind: Major
-  ancestor: yes
-  properties:
-  - name: name
-
