@@ -90,14 +90,14 @@ class MajorHandler(webapp2.RequestHandler):
 
         self.response.write(t.render(values))
 
-class ResultHandler(webapp2.RequestHandler):
+class EmailHandler(webapp2.RequestHandler):
     def get(self):
-        t = the_jinja_env.get_template('templates/results.html')
+        t = the_jinja_env.get_template('templates/email.html')
         self.response.write(t.render())
 
 
 routes = [
     ('/', MajorHandler),
-    ('.results', ResultHandler)
+    ('/email', EmailHandler)
     ]
 app = webapp2.WSGIApplication( routes , debug=True)
