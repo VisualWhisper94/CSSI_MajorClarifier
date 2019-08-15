@@ -7,8 +7,8 @@
   </head>
   <body>
     
-
-  <form method= "POST" class="container" action="https://formspree.io/alyssaroach@mec.science"></form>
+<!--
+  <form action="" method= "POST" class="container" >
     <h1>Send Email</h1>
 
   <label for="email">Email:</label>
@@ -19,14 +19,52 @@
   </br>
   <input type="name" name="name" placeholder="Your Name">
   </br>
-  <textarea name="name" placeholder="Test Message"></textarea>
+  <textarea name="name" placeholder="Text Message"></textarea>
   </br>
   <button type="submit">Send</button>
   </form>
+-->
 
 
+<div class="container">
+  <form action="">
 
-  
+    <label for="name">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="email">Email</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="college">College</label>
+    <select id="college" name="college">
+      <option value="CUNY Medgar Evers College">CUNY Medgar Evers College</option>
+      <option value="baruch">CUNY Baruch College</option>
+      <option value="brooklyn">CUNY Brooklyn College</option>
+      <option value="staten island">CUNY College of Staten Island</option>
+      <option value="hunter">CUNY Hunter College</option>
+      <option value="John Jay">CUNY John Jay College</option>
+      <option value="lehman">CUNY Lehman College</option>
+      <option value="brooklyn tech">CUNY New York City College of Technologhy</option>
+      <option value="york">CUNY York College</option>
+      <option value="queens">CUNY Queens College</option>
+      <option value="new york">CUNY The City College of New York</option>
+      <option value="brooklyn">CUNY Brooklyn College</option>
+      <option value="stony">SUNY Stony Brook University</option>
+      <option value="bing">SUNY Binghamton University</option>
+      <option value="buffalo">SUNY University at Buffalo</option>
+      <option value="oswego">SUNY Oswego</option>
+
+    
+    </select>
+    <br>
+    <br>
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px; width:100%;"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
     <div class="">
       <script src ="major.js"></script>
     </div>

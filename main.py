@@ -88,12 +88,13 @@ class MajorHandler(webapp2.RequestHandler):
             cummlpercent = values["failed"] / float(values["count"])
 
         Suggestion(cummlpercent)
+        values["data"] = classes
 
         self.response.write(t.render(values))
 #Created a request handler called Email for the results page
 class EmailHandler(webapp2.RequestHandler):
     def get(self):
-        t = the_jinja_env.get_template('templates/email.html')
+        t = the_jinja_env.get_template('/templates/email.html')
         self.response.write(t.render())
 
 #Routes to the different HTML files
