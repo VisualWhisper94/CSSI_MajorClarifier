@@ -104,9 +104,24 @@ input[type=text]:focus, input[type=password]:focus {
 {
   font-size: 17px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 16px 20px;
+}
+
+.userClass
+{
+  margin-top: 0.5em;
+  border: 2px dashed gray;
+}
+
+#but
+{
   
 }
 
+#button
+{
+  
+}
 
 .failed
 {
