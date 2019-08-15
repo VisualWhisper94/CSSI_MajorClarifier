@@ -55,7 +55,7 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-.btn {
+.button{
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -64,10 +64,28 @@ input[type=text]:focus, input[type=password]:focus {
   width: 100%;
   /*opacity: 0.9;*/
 }
-.btn:hover
+.button:hover
 {
   opacity: 1;
 }
+
+.button
+{
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  /*opacity: 0.9;*/
+}
+
+.but:hover
+{
+    opacity: 1;
+}
+
+
 
 .failed
 {
