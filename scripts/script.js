@@ -19,8 +19,6 @@ function addClass2()
         _gpa.type = "text";
         _class.value = value;
         _gpa.value = gpa;
-        _class.disabled = "true";
-        _gpa.disabled = "true";
         counter += 1;
 
 		parent.appendChild(_class);

@@ -93,7 +93,17 @@ input[type=text]:focus, input[type=password]:focus {
 {
   color: red;
 }
-.Passed
+.passed
 {
   color: green;
+}
+
+#run
+{
+  color:red;
+}
+
+#fun
+{
+   color:green;
 }
