@@ -15,19 +15,22 @@
     </div>
 
     <form method="POST" action="/" name="tester" class="container">
-        <label for="majors">Major: </label>
+        <label for="majors" class="fun">Major: </label>
         <select name="majors">
             {% for i in majors %}
-            <option value={{i}}>{{i}}</option>
+            <option value={{i}} class="lun">{{i}}</option>
             {% endfor %}
         </select>
-        <label for="other">Other: </label>
+        <br />
+        <br />
+        <label for="other" class="fun">Other: </label>
+    
         <input type="text" name="other" />
         <br />
-        <label for="newelement">Class: </label>
+        <label for="newelement" class="fun">Class: </label>
         <input type="text" name="newelement" />
        
-        <label for="gpa">GPA: </label>
+        <label for="gpa" class="fun">GPA: </label>
         <input type="text" name="gpa" />
         <input type="button" class="button" name="add" value="+" onclick="addClass2()" />
         <br />
