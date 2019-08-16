@@ -6,13 +6,20 @@ h1
   text-align: center;
 }
 */
+h1
+{
+  text-align: center;
+  display:inline-block;
+  font-size: 90px;
 
+}
 
 #head
 {
 border: 2px solid black;
-width: 500px;
+width: 1880px;
 height:200px;
+margin:10px;
 }
 
 #bed
@@ -21,6 +28,8 @@ border: 2px solid black;
 width: 500px;
 height:200px;
 margin-left:23.3em;
+float: right;
+margin:10px;
 
 }
 
