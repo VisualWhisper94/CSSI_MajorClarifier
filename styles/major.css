@@ -55,6 +55,7 @@ h1
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
 input[type=text], input[type=password] 
 {
   width: 95%;
@@ -141,4 +142,27 @@ input[type=text]:focus, input[type=password]:focus {
 {
    color:green;
 }
+/*
+#email {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#email email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
 
+#email{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: -1;
+}

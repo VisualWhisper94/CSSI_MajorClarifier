@@ -16,12 +16,16 @@
 
     <form method="POST" action="/" name="tester" class="container">
         <label for="majors" class="fun">Major: </label>
-        <select name="majors">
+        <select name="majors" class="lun">
             {% for i in majors %}
             <option value={{i}} class="lun">{{i}}</option>
             {% endfor %}
         </select>
         <br />
+        <br />
+         <label for="name" class="fun">Name: </label>
+        <input type="text" name="name" />
+
         <br />
         <label for="other" class="fun">Other: </label>
     
