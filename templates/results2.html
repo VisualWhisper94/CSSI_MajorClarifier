@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Transcript</title>
     <link rel="stylesheet" href="styles/major.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 <!--
@@ -13,7 +14,14 @@
         <img src="https://i.kinja-img.com/gawker-media/image/upload/s--7rxeih2j--/c_scale,f_auto,fl_progressive,q_80,w_800/k54v9hraig7aab9xky7k.jpg" alt="">
     </div>
     -->
- <div id="gun">
+ 
+ <div>
+    <button onclick="window.print()" id="mat"><i class="material-icons">&#xe8ad;</i>
+    </button>
+ </div>
+ 
+ 
+    <div id="gun">
     <h1 id="head">Official Transcript
     
        <div id="id">
@@ -131,24 +139,29 @@
     
 </br>
 </br>
-    
+    <div id="lastrow">
+            <div>
             <div id="sam" class="maj">
                 Suggestions:
             </div>
             
             <ul>
-            <li>
-            <div class="maj"> 
-                {{suggestions}}
-            </div>
-            </li>
+                <li>
+           
+                    <div class="maj"> 
+                        {{suggestions}}
+                    </div>
+                </li>
             </ul>
+            </div>
+            <div id="li">
+                If you would like a copy of this transcript emailed to you, please click this link
+                <a href="/email">Email Me</a>
+            </div>
+    </div>
 
         
     
-    <div class="maj" id="li">
-        If you would like a copy of this transcript emailed to you, please click this link
-        <a href="/email">Email Me</a>
-    </div>
+    
 </body>
 </html>

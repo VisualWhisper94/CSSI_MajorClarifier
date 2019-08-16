@@ -315,6 +315,8 @@ input[type=text]:focus, input[type=password]:focus {
 #li
 {
   float: right;
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 a:link, a:visited {
@@ -328,4 +330,18 @@ a:link, a:visited {
 
 a:hover, a:active {
   background-color:#4CAF50;
+}
+
+#lastrow
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mat
+{
+  float: right;
 }

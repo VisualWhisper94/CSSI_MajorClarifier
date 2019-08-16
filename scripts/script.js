@@ -29,3 +29,6 @@ function addClass2()
     }
 
 }
+function myFunction() {
+    window.print();
+  }
