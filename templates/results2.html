@@ -25,83 +25,128 @@
     </h1>
 </div>
     
+<table>
+    <tr>
+      <th>Student Info</th>
+      <th>Academic Summary</th>
+    </tr>
     
-    
-    <ul>
-        <li>
-            <div>
+    <tr>
+        <td>
+            <ul>
+                 <li>
+            <div class="maj">
                 Major:
             </div>
-            <div>
+            <div class="maj">
                 {{major}}
             </div>    
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                </li>
+             </ul>
+         </td>
+      
+
+
+         
+      <td>
+        <ul>
+                <li>
+                        <div class="maj">
+                            Classes Completed: 
+                        </div>
+                        <div class="maj">
+                            {{count}}
+                        </div>    
+                    </li>
+        </ul>
+      </td>
+    </tr>
+<tr>
+    <td>
+            <ul>
+                    <li>
+                            <div class="maj"> 
+                                Status:
+                            </div>
+                            <div class="maj">
+                                {{status}}
+                            </div>    
+                        </li>   
+            </ul>
+    </td>
+
+    <td>
+<ul>
         <li>
-            <div>
-                Status:
-            </div>
-            <div>
-                {{status}}
-            </div>    
-        </li>
+                <div id="run" class="maj">
+                    Classes Failed:
+                </div>
+                <div class="maj">
+                    {{failed}}
+                </div>    
+            </li>
+
+</ul>
+
+    </td>
+</tr>
+
+<tr>
+
+<td>
+<ul>
         <li>
-            <div>
-                Classes Completed: 
-            </div>
-            <div>
-                {{count}}
-            </div>    
-        </li>
-        <li>
-            <div id="fun">
-                Classes Passed:
-            </div>
-            <div>
-                {{passed}}
-            </div>    
-        </li>
-        <li>
-            <div id="run">
-                Classes Failed:
-            </div>
-            <div>
-                {{failed}}
-            </div>    
-        </li>
-        <li>
-            <div>
-                Class List:
-            </div>
-            <div>
-                <ul>
-                {% for i in classes %}
-                    <li class={{i[2]}}>{{i[0]}} {{i[1]}}</li>
-                {% endfor %}
-                </ul>
-            </div>    
-        </li>
-        <li>
-            <div>
+                <div class="maj">
+                    Class List:
+                </div>
+                <div class="maj">
+                    <ul>
+                    {% for i in classes %}
+                        <li class={{i[2]}}>{{i[0]}} {{i[1]}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>    
+            </li>
+</ul>
+</td>
+
+<td>
+       <ul>
+    
+    <li>
+                <div id="fun" class="maj">
+                    Classes Passed:
+                </div>
+                <div class="maj">
+                    {{passed}}
+                </div>    
+            </li>
+            </ul>
+        </td>
+
+
+</tr>
+
+</table>
+    
+</br>
+</br>
+    
+            <div id="sam" class="maj">
                 Suggestions:
             </div>
-            <div>
+            
+            <ul>
+            <li>
+            <div class="maj"> 
                 {{suggestions}}
             </div>
-        </li>
+            </li>
+            </ul>
 
         
-    </ul>
-    <div>
+    
+    <div class="maj" id="li">
         If you would like a copy of this transcript emailed to you, please click this link
         <a href="/email">Email Me</a>
     </div>
