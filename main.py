@@ -11,8 +11,8 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-#Values dictionary is holds templates variables
-values = {"majors":["History","Mathematics","English","Liberal Arts","Computer Science","Other"]}
+#Values dictionary is holds Majors value with keys that has different majors
+values = {"majors":["History","Mathematics","English","Liberal Arts","Computer Science","Biology","Nursing","Business","Marketing","Psychology","Other"]}
 #Created a handler called MajorHandler
 
 def CompileClassData(elements):
