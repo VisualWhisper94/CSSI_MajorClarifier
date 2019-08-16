@@ -1,12 +1,51 @@
-
+/*
 h1
 {
   font-size: 30px;
-  color: rgb(9, 134, 13);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
+*/
 
-#img {
+
+#head
+{
+border: 2px solid black;
+width: 500px;
+height:200px;
+}
+
+#bed
+{
+border: 2px solid black;
+width: 500px;
+height:200px;
+margin-left:23.3em;
+
+}
+
+
+
+
+#image
+{
+    border-radius: 50%;
+    width:76%;
+}
+
+#id
+{
+    float: right;
+    margin-left:10em;
+}
+
+#back
+{
+    background-color: white;
+}
+
+#img 
+{
   position: fixed;
   top: -50%;
   left: -50%;
