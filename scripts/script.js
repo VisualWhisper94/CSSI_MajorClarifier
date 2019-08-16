@@ -21,10 +21,11 @@ function addClass2()
         _gpa.value = gpa;
         counter += 1;
 
+        parent.className = "userClass";
 		parent.appendChild(_class);
         parent.appendChild(_gpa);
 		
-        document.forms['tester'].insertBefore(parent,document.forms['tester']['submit']);
+        document.querySelector('#classList').appendChild(parent);
     }
 
 }

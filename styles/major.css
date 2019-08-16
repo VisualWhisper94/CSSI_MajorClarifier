@@ -1,12 +1,51 @@
-
+/*
 h1
 {
   font-size: 30px;
-  color: rgb(9, 134, 13);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
+*/
 
-#img {
+
+#head
+{
+border: 2px solid black;
+width: 500px;
+height:200px;
+}
+
+#bed
+{
+border: 2px solid black;
+width: 500px;
+height:200px;
+margin-left:23.3em;
+
+}
+
+
+
+
+#image
+{
+    border-radius: 50%;
+    width:76%;
+}
+
+#id
+{
+    float: right;
+    margin-left:10em;
+}
+
+#back
+{
+    background-color: white;
+}
+
+#img 
+{
   position: fixed;
   top: -50%;
   left: -50%;
@@ -55,14 +94,27 @@ h1
 
 .container
 {
-  border: 2px ;
+  border: 2px solid grey;
   right: 0;
   margin: auto;
-  max-width: 400px;
+
+  max-width: 35%;
   padding: 16px;
   background-color: white;
   opacity: 0.8;
 
+}
+
+.fun
+{
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.lun
+{
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -80,15 +132,16 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-.button {
+/*.button {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 150%;
   opacity: 0.9;
 }
+*/
 .button:hover
 {
   opacity: 1;
@@ -101,7 +154,7 @@ input[type=text]:focus, input[type=password]:focus {
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
   /*opacity: 0.9;*/
 }
 
@@ -110,7 +163,28 @@ input[type=text]:focus, input[type=password]:focus {
     opacity: 1;
 }
 
+.but
+{
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 16px 20px;
+}
 
+.userClass
+{
+  margin-top: 0.5em;
+  border: 2px dashed gray;
+}
+
+#but
+{
+  
+}
+
+#button
+{
+  
+}
 
 .failed
 {
@@ -129,4 +203,28 @@ input[type=text]:focus, input[type=password]:focus {
 #fun
 {
    color:green;
+}
+/*
+#email {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#email email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#email{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: -1;
 }
