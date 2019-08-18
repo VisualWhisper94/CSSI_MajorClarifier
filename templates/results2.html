@@ -1,87 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="back">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Transcript</title>
     <link rel="stylesheet" href="styles/major.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
+<!--
     <div id="img">
         <img src="https://i.kinja-img.com/gawker-media/image/upload/s--7rxeih2j--/c_scale,f_auto,fl_progressive,q_80,w_800/k54v9hraig7aab9xky7k.jpg" alt="">
     </div>
+    -->
+ 
+ <div>
+    <button onclick="window.print()" id="mat"><i class="material-icons">&#xe8ad;</i>
+    </button>
+ </div>
+ 
+ 
+    <div id="gun">
+    <h1 id="head">Official Transcript
     
-    <h1>Transcript</h1>
-
-    <ul>
-        <li>
-            <div>
+       <div id="id">
+        
+        <img src="https://cdn3.vectorstock.com/i/thumb-large/99/12/education-search-college-university-logo-vector-4059912.jpg" id="image">
+        
+        </div>
+   
+    </h1>
+</div>
+    
+<table>
+    <tr>
+      <th>Student Info</th>
+      <th>Academic Summary</th>
+    </tr>
+    
+    <tr>
+        <td>
+            <ul>
+                 <li>
+            <div class="maj">
                 Major:
             </div>
-            <div>
+            <div class="maj">
                 {{major}}
             </div>    
-        </li>
+                </li>
+             </ul>
+         </td>
+      
+
+
+         
+      <td>
+        <ul>
+                <li>
+                        <div class="maj">
+                            Classes Completed: 
+                        </div>
+                        <div class="maj">
+                            {{count}}
+                        </div>    
+                    </li>
+        </ul>
+      </td>
+    </tr>
+<tr>
+    <td>
+            <ul>
+                    <li>
+                            <div class="maj"> 
+                                Status:
+                            </div>
+                            <div class="maj">
+                                {{status}}
+                            </div>    
+                        </li>   
+            </ul>
+    </td>
+
+    <td>
+<ul>
         <li>
-            <div>
-                Status:
-            </div>
-            <div>
-                {{status}}
-            </div>    
-        </li>
+                <div id="run" class="maj">
+                    Classes Failed:
+                </div>
+                <div class="maj">
+                    {{failed}}
+                </div>    
+            </li>
+
+</ul>
+
+    </td>
+</tr>
+
+<tr>
+
+<td>
+<ul>
         <li>
+                <div class="maj">
+                    Class List:
+                </div>
+                <div class="maj">
+                    <ul>
+                    {% for i in classes %}
+                        <li class={{i[2]}}>{{i[0]}} {{i[1]}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>    
+            </li>
+</ul>
+</td>
+
+<td>
+       <ul>
+    
+    <li>
+                <div id="fun" class="maj">
+                    Classes Passed:
+                </div>
+                <div class="maj">
+                    {{passed}}
+                </div>    
+            </li>
+            </ul>
+        </td>
+
+
+</tr>
+
+</table>
+    
+</br>
+</br>
+    <div id="lastrow">
             <div>
-                Classes Completed: 
-            </div>
-            <div>
-                {{count}}
-            </div>    
-        </li>
-        <li>
-            <div id="fun">
-                Classes Passed:
-            </div>
-            <div>
-                {{passed}}
-            </div>    
-        </li>
-        <li>
-            <div id="run">
-                Classes Failed:
-            </div>
-            <div>
-                {{failed}}
-            </div>    
-        </li>
-        <li>
-            <div>
-                Class List:
-            </div>
-            <div>
-                <ul>
-                {% for i in classes %}
-                    <li class={{i[2]}}>{{i[0]}} {{i[1]}}</li>
-                {% endfor %}
-                </ul>
-            </div>    
-        </li>
-        <li>
-            <div>
+            <div id="sam" class="maj">
                 Suggestions:
             </div>
-            <div>
-                {{suggestions}}
+            
+            <ul>
+                <li>
+           
+                    <div class="maj"> 
+                        {{suggestions}}
+                    </div>
+                </li>
+            </ul>
             </div>
-        </li>
+            <div id="li">
+                If you would like a copy of this transcript emailed to you, please click this link
+                <a href="/email">Email Me</a>
+            </div>
+    </div>
 
         
-    </ul>
-    <div>
-        If you would like a copy of this transcript emailed to you, please click this link
-        <a href="/email">Email Me</a>
-    </div>
+    
+    
 </body>
 </html>

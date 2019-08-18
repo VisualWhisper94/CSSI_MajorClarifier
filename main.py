@@ -11,10 +11,9 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-#Values dictionary is holds templates variables
-values = {"majors":["History","Mathematics","English","Liberal Arts","Computer Science","Other"]}
-#defined an elemnt called CompileClassData
-#It appends the value of classes under passed or failed
+#Values dictionary is holds Majors value with keys that has different majors
+values = {"majors":["History","Mathematics","English","Liberal Arts","Computer Science","Biology","Nursing","Business","Marketing","Psychology","Other"]}
+#Created a handler called MajorHandler
 
 def CompileClassData(elements):
     values["failed"] = 0
@@ -71,7 +70,7 @@ def Suggestion(percent):
         values["suggestions"] = "You may need help keeping up the pace. Consider finding external help such as tutoring."
     else:
         values["suggestions"] = "You may need to consider switching your major. Please speak to your advisor for further help."
-# created a handler called Major and its a request handler 
+# created a handler called Major and its a request handler
 class MajorHandler(webapp2.RequestHandler):
     def get(self):
         t = the_jinja_env.get_template('templates/index2.html')

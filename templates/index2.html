@@ -13,14 +13,15 @@
     <div id="img">
         <img src="https://i.kinja-img.com/gawker-media/image/upload/s--7rxeih2j--/c_scale,f_auto,fl_progressive,q_80,w_800/k54v9hraig7aab9xky7k.jpg" alt="">
     </div>
-
+    <div id="Dropdown2">
     <form method="POST" action="/" name="tester" class="container">
         <label for="majors" class="fun">Major: </label>
-        <select name="majors">
+        <select name="majors" class="lun">
             {% for i in majors %}
             <option value={{i}} class="lun">{{i}}</option>
             {% endfor %}
         </select>
+        <br />
         <br />
         <br />
         <label for="other" class="fun">Other: </label>
@@ -38,7 +39,7 @@
             
         </div>
     </form>
-
+    </div>
     <ul>
         {% for i in elements %}
         <li>

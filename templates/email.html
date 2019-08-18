@@ -2,11 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Suggestion</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="styles/major.css">
   </head>
   <body>
-    
+  
+   <div id="img">
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/s--7rxeih2j--/c_scale,f_auto,fl_progressive,q_80,w_800/k54v9hraig7aab9xky7k.jpg" alt="">
+</div>
+
 <!--
   <form action="" method= "POST" class="container" >
     <h1>Send Email</h1>
@@ -25,40 +29,45 @@
   </form>
 -->
 
-
-<div class="container">
+<div class="container", id="Dropdown">
   <form action="">
 
-    <label for="name">Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="firstname" class="lun">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="first name">
 
-    <label for="email">Email</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="lastname" class="lun">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="last name">
 
-    <label for="college">College</label>
-    <select id="college" name="college">
-      <option value="CUNY Medgar Evers College">CUNY Medgar Evers College</option>
-      <option value="baruch">CUNY Baruch College</option>
-      <option value="brooklyn">CUNY Brooklyn College</option>
-      <option value="staten island">CUNY College of Staten Island</option>
-      <option value="hunter">CUNY Hunter College</option>
-      <option value="John Jay">CUNY John Jay College</option>
-      <option value="lehman">CUNY Lehman College</option>
-      <option value="brooklyn tech">CUNY New York City College of Technologhy</option>
-      <option value="york">CUNY York College</option>
-      <option value="queens">CUNY Queens College</option>
-      <option value="new york">CUNY The City College of New York</option>
-      <option value="brooklyn">CUNY Brooklyn College</option>
-      <option value="stony">SUNY Stony Brook University</option>
-      <option value="bing">SUNY Binghamton University</option>
-      <option value="buffalo">SUNY University at Buffalo</option>
-      <option value="oswego">SUNY Oswego</option>
+    <label for="email" class="lun">Email</label>
+    <input type="text" id="mail" name="email" placeholder="email">
+
+
+    <label for="college" class="lun">College</label>
+    <select id="college" name="college" class="lun">
+      <option value="CUNY Medgar Evers College" class="lun">CUNY Medgar Evers College</option>
+      <option value="baruch" class="lun">CUNY Baruch College</option>
+      <option value="brooklyn" class="lun">CUNY Brooklyn College</option>
+      <option value="staten island" class="lun">CUNY College of Staten Island</option>
+      <option value="hunter" class="lun">CUNY Hunter College</option>
+      <option value="John Jay" class="lun">CUNY John Jay College</option>
+      <option value="lehman" class="lun">CUNY Lehman College</option>
+      <option value="brooklyn tech" class="lun">CUNY New York City College of Technologhy</option>
+      <option value="york" class="lun">CUNY York College</option>
+      <option value="queens" class="lun">CUNY Queens College</option>
+      <option value="new york" class="lun">CUNY The City College of New York</option>
+      <option value="brooklyn" class="lun">CUNY Brooklyn College</option>
+      <option value="stony" class="lun">SUNY Stony Brook University</option>
+      <option value="bing" class="lun">SUNY Binghamton University</option>
+      <option value="buffalo" class="lun">SUNY University at Buffalo</option>
+      <option value="oswego" class="lun">SUNY Oswego</option>
+      <option value="other" class="lun">Other</option>
+
 
     
     </select>
     <br>
     <br>
-    <label for="subject">Subject</label>
+    <label for="subject" class="lun">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px; width:100%;"></textarea>
 
     <input type="submit" value="Submit">

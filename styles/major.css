@@ -1,12 +1,80 @@
-
+/*
 h1
 {
   font-size: 30px;
-  color: rgb(9, 134, 13);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
+*/
+h1
+{
+  text-align: center;
+  display:inline-block;
+  font-size: 90px;
 
-#img {
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table
+{
+  width: 100%;
+  height: 10px;
+}
+
+td
+{
+  height:150px;
+}
+
+th
+{
+  height:90px;
+}
+
+#head
+{
+border: 2px solid black;
+width: 1880px;
+height:200px;
+margin:10px;
+}
+
+#bed
+{
+border: 2px solid black;
+width: 500px;
+height:200px;
+margin-left:23.3em;
+float: right;
+margin:10px;
+
+}
+
+
+
+
+#image
+{
+    border-radius: 50%;
+    width:76%;
+}
+
+#id
+{
+    float: right;
+    margin-left:10em;
+}
+
+#back
+{
+    background-color: white;
+}
+
+#img 
+{
   position: fixed;
   top: -50%;
   left: -50%;
@@ -26,6 +94,29 @@ h1
 
 #img {
   opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: -1;
+}
+#img2
+{
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#img2 img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+#img2 {
   filter: alpha(opacity=50);
   z-index: -1;
 }
@@ -54,6 +145,7 @@ h1
   font-size: 17px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 input[type=text], input[type=password] 
 {
@@ -141,4 +233,115 @@ input[type=text]:focus, input[type=password]:focus {
 {
    color:green;
 }
+#Dropdown
+{
+  width: 500px;
+  height: 570px;
+  position: relative;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes example {
+  from {top: 0px;}
+  to {top: 200px;/* background-color: blue;*/}
+}
 
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px;/* background-color: blue;*/}
+}
+#Dropdown2
+{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes example {
+  from {top: 0px;}
+  to {top: 200px;/* background-color: blue;*/}
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px;/* background-color: blue;*/}
+}
+/*
+#email {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#email email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+#email{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: -1;
+}
+*/
+
+.maj
+{
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sam
+{
+  font-size: 34px;
+}
+
+#li
+{
+  float: right;
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a:link, a:visited {
+  background-color:#4CAF50;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:#4CAF50;
+}
+
+#lastrow
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mat
+{
+  float: right;
+}
